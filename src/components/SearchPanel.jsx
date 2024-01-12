@@ -45,6 +45,7 @@ export default function SearchPanel({searchMovies}) {
                         <option value="all">All</option>
                         <option value="movie">Movie</option>
                         <option value="series">Series</option>
+                        <option value="episode">Episode</option>
                     </select>
                     </div>
                 </div>
