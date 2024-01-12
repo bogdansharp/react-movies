@@ -24,7 +24,7 @@ export default function Header({title}) {
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <a href='#'>
+              <a href='https://github.com/bogdansharp/react-movies' target="_blank">
                 <FontAwesomeIcon 
                   className='text-white h-6' 
                   icon={faGithub} 
