@@ -154,4 +154,13 @@
   .App .site-title-block {
     justify-content: left !important;
   }
+  .App .pagination .page-prev-btn, 
+  .App .pagination .page-next-btn {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+  .App .pagination {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
 }

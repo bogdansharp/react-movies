@@ -25,10 +25,16 @@ export default function MainContent() {
                     'Search' in data && 'totalResults' in data)
                 {
                     setMovies(data.Search);
-                    setTotalResults(data.totalResults);
+                    setTotalResults(+data.totalResults);
+                    setSearch(s);
+                    setType(type);
+                    setPage(page);
                 } else {
                     setMovies([]);
                     setTotalResults(0);
+                    setSearch('');
+                    setType('all');
+                    setPage(1);
                 }
             })
             .catch(err => { 
