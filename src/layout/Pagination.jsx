@@ -1,3 +1,4 @@
+import './Pagination.css';
 import React, { useState } from 'react';
 
 function PageLink({page, goToPage, curPage}) {

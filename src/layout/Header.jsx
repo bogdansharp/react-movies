@@ -1,8 +1,8 @@
+import './Header.css';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faClapperboard } from '@fortawesome/free-solid-svg-icons';
-// import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header({title}) {
   return (
