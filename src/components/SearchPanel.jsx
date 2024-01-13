@@ -50,7 +50,7 @@ export default function SearchPanel({searchMovies}) {
                     </div>
                 </div>
             </div>
-            <div className='sm:flex-shrink-0 text-center mt-2 sm:mt-0'>
+            <div className='sm:flex-shrink-0 text-center mt-8 sm:mt-0'>
                 <button 
                     className="sm:flex w-24 font-semibold text-lg sm:text-xl justify-center rounded-md bg-indigo-600 px-3 py-1.5 leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" 
                     onClick={searchBtnClick}
