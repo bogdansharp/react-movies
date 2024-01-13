@@ -1,0 +1,6 @@
+
+@media (max-width: 300px) {
+    .App .main-movie table .movie-table-min-col {
+        min-width: 0 !important;
+    }
+}

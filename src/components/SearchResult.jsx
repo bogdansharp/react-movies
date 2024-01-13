@@ -11,7 +11,7 @@ export default function SearchResult(
         searchMovies(search, type, page);
     }
     return (
-        <div className='search-result'>
+        <div className='search-result text-lg sm:text-xl'>
             {isLoading ? <Loading/> : ( movies.length ? ( 
                 <>
                     <div className='movies sm:text-left grid sm:grid-cols1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4'>

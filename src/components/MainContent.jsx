@@ -102,7 +102,7 @@ export default function MainContent() {
                     setTotalResults={setTotalResults} 
                     setLoading={setLoading}
                 />
-                <div className='search-content mt-8 text-lg sm:text-xl'>
+                <div className='search-content mt-8'>
                     {isSearchDone ? 
                         <SearchResult 
                             movies={movies} 
