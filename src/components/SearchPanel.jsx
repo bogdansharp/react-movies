@@ -1,20 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-export default function SearchPanel({searchMovies}) {
+export default function SearchPanel() {
+    const navigate = useNavigate();
     const [searchStr, setSearchStr] = useState('');
     const [typeStr, setTypeStr] = useState('all');
-    const searchBtnClick = function() {
-        searchMovies(searchStr, typeStr);
+    const location = useLocation();
+
+    useEffect(() => {
+      const params = new URLSearchParams(location.search);
+      const s = params.get('s') || '';
+      const type = params.get('type') || 'all';
+      if (s !== searchStr) setSearchStr(s);
+      if (type !== typeStr) setTypeStr(type);
+      // eslint-disable-next-line
+    }, [location]);
+
+    const gotoSearchResult = () => {
+        let typeParam = typeStr === 'all' ? '' : `&type=${typeStr}`;
+        navigate(`?s=${searchStr}${typeParam}`);
     }
-    const searchInputKeyDown = function(e) {
-        if (e.key === 'Enter') {
-            searchMovies(searchStr, typeStr);
-        }
-    };
+    const searchBtnClick = () => gotoSearchResult();
+    const searchInputKeyDown = (e) => e.key === 'Enter' && gotoSearchResult();
+
     return (
-        <div className='search-panel sm:flex gap-2'>
+        <div className='search-panel sm:flex gap-2 mb-8'>
             <div className='sm:flex-1'>
                 <div className="relative rounded-md shadow-sm">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
